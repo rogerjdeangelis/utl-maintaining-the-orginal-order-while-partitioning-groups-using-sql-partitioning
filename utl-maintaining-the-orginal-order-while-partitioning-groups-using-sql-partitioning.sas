@@ -333,7 +333,7 @@ parmcards4;
         *
        ,seq-min(seq) + 1 as partition
      from
-       (select *, monotonic() as seq from sd1.have)
+       (select *, monotonic() as seq from &dsn)
      group
        by team )
    group
